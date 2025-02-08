@@ -24,3 +24,9 @@ mvn exec:java
 ```bash
 mvn test
 ```
+
+## SonarQube Scan
+
+```bash
+mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar. projectKey=Example-Java-Project -Dsonar.projectName='Example Java Project' -Dsonar.host. url="http://localhost:9000" -Dsonar.token="<TOKEN>"
+```

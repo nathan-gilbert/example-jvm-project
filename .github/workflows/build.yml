@@ -37,5 +37,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          MAVEN_OPTS: "-Dcom.sun.net.ssl.checkRevocation=false -Dcom.sun.security.enableAIAcaIssuers=false -Dcom.sun.net.ssl.trustStoreType=JKS"
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Example-Java-Project -Dsonar.projectName='Example Java Project'
